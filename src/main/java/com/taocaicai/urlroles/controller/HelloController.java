@@ -36,4 +36,10 @@ public class HelloController {
     public String userInfo(){
         return "this is user info page";
     }
+
+    @PreAuthorize("hasRole('user')")
+    @GetMapping("/user/pre")
+    public String PreAuthorize(){
+            return "test pre authorize";
+    }
 }
