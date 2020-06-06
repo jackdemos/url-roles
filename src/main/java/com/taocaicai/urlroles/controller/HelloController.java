@@ -1,5 +1,6 @@
 package com.taocaicai.urlroles.controller;
 
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -29,5 +30,10 @@ public class HelloController {
     @GetMapping("/user/hello")
     public String user() {
         return "hello user";
+    }
+
+    @GetMapping("/user/userInfo")
+    public String userInfo(){
+        return "this is user info page";
     }
 }
